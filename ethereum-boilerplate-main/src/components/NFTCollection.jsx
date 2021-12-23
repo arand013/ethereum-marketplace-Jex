@@ -67,7 +67,7 @@ function NFTBalance() {
   console.log("NFTBalances", NFTBalances);
   return (
     <div style={{ padding: "15px", maxWidth: "1030px", width: "100%" }}>
-      <h1>🖼 NFT Balances</h1>
+      <h1>🖼 NFT Collection</h1>
       <div style={styles.NFTs}>
         <Skeleton loading={!NFTBalances?.result}>
           {NFTBalances?.result &&
@@ -86,8 +86,8 @@ function NFTBalance() {
                     <Tooltip title="Transfer NFT">
                       <SendOutlined onClick={() => handleTransferClick(nft)} />
                     </Tooltip>,
-                    <Tooltip title="Sell On OpenSea">
-                      <ShoppingCartOutlined onClick={() => alert("OPENSEA INTEGRATION COMING!")} />
+                    <Tooltip title="List this NFT">
+                      <ShoppingCartOutlined onClick={() => alert("INTEGRATION COMING!")} />
                     </Tooltip>,
                   ]}
                   style={{ width: 240, border: "2px solid #e7eaf3" }}
