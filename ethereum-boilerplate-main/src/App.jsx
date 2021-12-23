@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-d
 import Account from "components/Account/Account";
 import Chains from "components/Chains";
 import TokenPrice from "components/TokenPrice";
+import NFTTokenIds from "components/NFTTokenIds"
+
+import Balance from "components/ERC20Balance"
 
 import Transactions from "components/Transactions";
 
@@ -80,7 +83,7 @@ const App = ({ isServerInfo }) => {
         <div style={styles.content}>
           <Switch>
             <Route exact path="/Explore">
-              <Explore isServerInfo={isServerInfo} />
+              <NFTTokenIds />
             </Route>
        
             <Route path="/NFTCollection">
@@ -88,6 +91,9 @@ const App = ({ isServerInfo }) => {
             </Route>
             <Route path="/Transactions">
               <Transactions />
+            </Route>
+            <Route path="/ERC20Balance">
+              <Balance />
             </Route>
             <Route path="/">
               <Redirect to="/Explore" />

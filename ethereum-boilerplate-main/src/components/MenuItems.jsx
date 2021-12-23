@@ -25,10 +25,18 @@ function MenuItems() {
       <Menu.Item key="/NFTCollection">
         <NavLink to="/NFTCollection">🖼 NFTs</NavLink>
       </Menu.Item>
+      
 
       <Menu.Item key="/Transactions">
         <NavLink to="/Transactions">💸 Transactions</NavLink>
       </Menu.Item>
+
+      <Menu.Item key="/ERC20Balance">
+        <NavLink to="/ERC20Balance">💸 Balance</NavLink>
+      </Menu.Item>
+
+     
+
   
     </Menu>
   );
