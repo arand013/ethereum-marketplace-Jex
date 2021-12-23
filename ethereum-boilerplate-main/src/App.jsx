@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-d
 import Account from "components/Account/Account";
 import Chains from "components/Chains";
 import TokenPrice from "components/TokenPrice";
-import NFTTokenIds from "components/NFTTokenIds"
+// import NFTTokenIds from "components/NFTTokenIds"
 
 import Balance from "components/ERC20Balance"
 
@@ -81,10 +81,8 @@ const App = ({ isServerInfo }) => {
 
         <div style={styles.content}>
           <Switch>
-            <Route exact path="/NFTTokenIds">
-              <NFTTokenIds />
-            </Route>
-       
+
+
             <Route path="/NFTCollection">
               <NFTCollection />
             </Route>
@@ -97,8 +95,9 @@ const App = ({ isServerInfo }) => {
             <Route path="/">
               <Redirect to="/NFTTokenIds" />
             </Route>
-        
+
             <Route path="/nonauthenticated">
+              
               <>Please login using the "Authenticate" button</>
             </Route>
           </Switch>
