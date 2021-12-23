@@ -16,7 +16,6 @@ import { Layout } from "antd";
 import "antd/dist/antd.css";
 import NativeBalance from "components/NativeBalance";
 import "./style.css";
-import Explore from "components/Explore";
 import Text from "antd/lib/typography/Text";
 import MenuItems from "./components/MenuItems";
 const { Header, Footer } = Layout;
@@ -82,7 +81,7 @@ const App = ({ isServerInfo }) => {
 
         <div style={styles.content}>
           <Switch>
-            <Route exact path="/Explore">
+            <Route exact path="/NFTTokenIds">
               <NFTTokenIds />
             </Route>
        
@@ -96,7 +95,7 @@ const App = ({ isServerInfo }) => {
               <Balance />
             </Route>
             <Route path="/">
-              <Redirect to="/Explore" />
+              <Redirect to="/NFTTokenIds" />
             </Route>
         
             <Route path="/nonauthenticated">
